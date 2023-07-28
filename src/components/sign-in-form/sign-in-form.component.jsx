@@ -5,7 +5,7 @@ import FormInput from "../form-input/form-input.component";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 import { SignUpContainer, ButtonsContainer } from './sign-in-form.styles.jsx';
-import { googleSignInStart, emailSignInStart } from "../../store/user/user.action";
+import { googleSignInStart, emailSignInStart } from "../../store/user/user.reducer";
 
 const defaultFormFields = {
     email: '',
@@ -37,7 +37,7 @@ const SignInForm = () => {
         }
     
         try {
-            dispatch(emailSignInStart(email, password));
+            dispatch(emailSignInStart({email, password}));
             resetFormFields();
         } catch (err) {
             switch(err.code) {

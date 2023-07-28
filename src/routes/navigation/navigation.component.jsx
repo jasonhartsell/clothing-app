@@ -9,7 +9,7 @@ import { selectIsCartOpen } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from "../../store/user/user.selector";
 
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
-import { signOutStart } from "../../store/user/user.action";
+import { signOutStart } from "../../store/user/user.reducer";
 
 import { NavigationContainer, LogoContainer, NavLinks, NavLink } from './navigation.styles.jsx';
 

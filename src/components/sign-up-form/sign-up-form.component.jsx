@@ -5,7 +5,7 @@ import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 
 import { SignUpContainer } from './sign-up-form.styles.jsx';
-import { signUpStart } from "../../store/user/user.action";
+import { signUpStart } from "../../store/user/user.reducer";
 
 const defaultFormFields = {
     displayName: '',
@@ -40,7 +40,7 @@ const SignUpForm = () => {
         }
     
         try {
-            dispatch(signUpStart(email, password, displayName));
+            dispatch(signUpStart({email, password, displayName}));
             resetFormFields();
         } catch (err) {
             if (err.code === 'auth/email-already-in-use') {
