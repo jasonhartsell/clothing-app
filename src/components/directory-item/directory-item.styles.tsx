@@ -38,6 +38,10 @@ export const Body = styled.div`
     font-weight: lighter;
     font-size: 16px;
   }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 5px;
+  }
 `;
 
 export const DirectoryItemContainer = styled.div<HTMLAttributes<HTMLDivElement>>`
@@ -70,5 +74,9 @@ export const DirectoryItemContainer = styled.div<HTMLAttributes<HTMLDivElement>>
     ${Body} {
       opacity: 0.9;
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    heigh: 200px;
   }
 `;
